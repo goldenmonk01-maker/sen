@@ -14,7 +14,6 @@
         h1 { font-family: 'Playfair Display', serif; color: var(--primary); font-size: 1.6rem; margin: 0; }
         .motto { font-style: italic; opacity: 0.8; font-size: 0.95rem; margin-top: 5px; }
 
-        /* Estilo de la Nota de Ayuda */
         .help-note { 
             background: #ffffff; 
             border: 1px solid var(--accent); 
@@ -28,14 +27,28 @@
         }
 
         .section-title { font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--accent); display: inline-block; margin-bottom: 15px; color: var(--primary); }
-        .card { background: var(--white); border-radius: 20px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(45,70,53,0.05); border: 1px solid #eee; }
+        .card { background: var(--white); border-radius: 20px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(45,70,53,0.05); border: 1px solid #eee; position: relative; }
         
-        .description { font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
-        .highlight { color: var(--accent); font-weight: 500; }
+        /* Contenedor de Imagen 2x2cm */
+        .img-placeholder { 
+            width: 2cm; 
+            height: 2cm; 
+            background: #f0f0f0; 
+            border: 1px dashed #ccc; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 0.7rem; 
+            color: #999; 
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
 
+        .description { font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
         .price-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
         .price-table td { padding: 10px 0; border-bottom: 1px dotted #ccc; }
         .promo-row { color: var(--primary); font-weight: bold; }
+        .gift-tag { color: var(--accent); font-weight: bold; font-size: 0.85rem; }
 
         .btn { display: block; background: var(--primary); color: var(--white); text-align: center; padding: 16px; border-radius: 30px; text-decoration: none; font-weight: 500; letter-spacing: 1px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(45,70,53,0.2); }
         .btn:hover { background: var(--accent); }
@@ -56,6 +69,7 @@
     </div>
 
     <div class="card">
+        <img src="imagen2.jpg" alt="Alulosa Pura" class="img-placeholder">
         <span class="section-title">Alulosa Pura 100%</span>
         <p class="description">Un endulzante de origen natural que el cuerpo no metaboliza. Libre de Maltodextrina para proteger tu microbiota.</p>
         <table class="price-table">
@@ -67,13 +81,40 @@
     </div>
 
     <div class="card">
+        <img src="imagen1.jpg" alt="Postre de Avena" class="img-placeholder">
         <span class="section-title">Postre de Avena & Cacao</span>
         <p class="description">Elaborado artesanalmente con avena integral y cacao genuino. Sin lácteos ni harinas refinadas.</p>
         <table class="price-table">
             <tr><td>Molde Artesanal (400g)</td><td align="right">S/ 25</td></tr>
-            <tr><td>2 Moldes </td><td align="right">S/ 40</td></tr>
+            <tr class="promo-row"><td>Dúo Chocolate (2 Moldes)</td><td align="right">S/ 40</td></tr>
         </table>
-        <a href="https://api.whatsapp.com/send?phone=51990582170&text=Hola+Golden+Monk+quiero+probar+el+Postre" class="btn">Información Postre</a>
+        <a href="https://api.whatsapp.com/send?phone=51913642644&text=Hola+Golden+Monk+quiero+probar+el+Postre" class="btn">Información Postre</a>
+    </div>
+
+    <div class="card">
+        <img src="imagen3.jpg" alt="OatBizkit" class="img-placeholder">
+        <span class="section-title">Galletas de Avena & Cacao</span>
+        <p class="description">Textura perfecta y sabor honesto. Pack ideal para tus pausas del día.</p>
+        <table class="price-table">
+            <tr><td>Pack de 8 Galletas (360g aprox)</td><td align="right">S/ 15</td></tr>
+        </table>
+        <a href="https://api.whatsapp.com/send?phone=51913642644&text=Hola+Golden+Monk+deseo+las+Galletas" class="btn">Quiero mis Galletas</a>
+    </div>
+
+    <div class="card">
+        <img src="imagen4.jpg" alt="Reto 7 Días" class="img-placeholder">
+        <span class="section-title">Kit Desinflamación</span>
+        <p class="description">
+            Un ritual completo para resetear tu cuerpo:<br>
+            • 150g de Alulosa Pura.<br>
+            • 2 Pack Infusión Día (Té verde, rojo, jazmín).<br>
+            • 2 Pack Infusión Noche (Pimpinela, jamaica, canela).<br>
+            <span class="gift-tag">🎁 REGALO: Infusor de acero inoxidable</span>
+        </p>
+        <table class="price-table">
+            <tr class="promo-row"><td>Kit Completo + Regalo</td><td align="right">S/ 59</td></tr>
+        </table>
+        <a href="https://api.whatsapp.com/send?phone=51913642644&text=Hola+Golden+Monk+quiero+el+Kit+Desinflamacion" class="btn">Solicitar Kit</a>
     </div>
 
     <div class="footer">

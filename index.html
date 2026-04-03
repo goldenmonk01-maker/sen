@@ -29,7 +29,6 @@
         .section-title { font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--accent); display: inline-block; margin-bottom: 15px; color: var(--primary); }
         .card { background: var(--white); border-radius: 20px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(45,70,53,0.05); border: 1px solid #eee; position: relative; }
         
-        /* Contenedor de Imagen 2x2cm */
         .img-placeholder { 
             width: 2cm; 
             height: 2cm; 
@@ -46,10 +45,19 @@
 
         .description { font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
         
-        /* Estilos para los Checks */
-        .benefits-list { list-style: none; padding: 0; margin: 20px 0; font-size: 0.85rem; }
-        .benefits-list li { margin-bottom: 10px; display: flex; align-items: flex-start; line-height: 1.4; }
-        .benefits-list li::before { content: '✓'; color: var(--accent); font-weight: bold; margin-right: 10px; }
+        /* AJUSTE DE COLUMNAS SIMÉTRICAS */
+        .benefits-list { list-style: none; padding: 0; margin: 25px 0; font-size: 0.85rem; }
+        .benefits-list li { 
+            display: grid;
+            grid-template-columns: 25px 120px 1fr; /* Icono | Título | Descripción */
+            gap: 8px;
+            margin-bottom: 12px;
+            align-items: start;
+            line-height: 1.4;
+        }
+        .check-icon { color: var(--accent); font-weight: bold; }
+        .benefit-title { font-weight: bold; color: var(--text); }
+        .benefit-desc { color: #666; }
 
         .price-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
         .price-table td { padding: 10px 0; border-bottom: 1px dotted #ccc; }
@@ -79,11 +87,31 @@
         <p class="description">Un endulzante de origen natural que el cuerpo no metaboliza. Libre de Maltodextrina para proteger tu microbiota.</p>
         
         <ul class="benefits-list">
-            <li><strong>Bajo en Calorías:</strong> La alulosa contiene solo el 10% de las calorías del azúcar normal.</li>
-            <li><strong>Bajo Índice Glucémico:</strong> Esto la hace segura para personas con diabetes.</li>
-            <li><strong>No Cariogénica:</strong> No se adhiere a los dientes y no promueve la caries dental.</li>
-            <li><strong>Versatilidad en la Cocina:</strong> Se carameliza, se dora y cristaliza, ideal para postres y horneados.</li>
-            <li><strong>Sabor Igual al Azúcar:</strong> Sin retrogusto metálico.</li>
+            <li>
+                <span class="check-icon">✓</span>
+                <span class="benefit-title">Bajo en Calorías:</span>
+                <span class="benefit-desc">Contiene solo el 10% de las calorías del azúcar normal.</span>
+            </li>
+            <li>
+                <span class="check-icon">✓</span>
+                <span class="benefit-title">Bajo I. Glucémico:</span>
+                <span class="benefit-desc">Segura para personas con diabetes.</span>
+            </li>
+            <li>
+                <span class="check-icon">✓</span>
+                <span class="benefit-title">No Cariogénica:</span>
+                <span class="benefit-desc">No promueve la caries dental.</span>
+            </li>
+            <li>
+                <span class="check-icon">✓</span>
+                <span class="benefit-title">Versatilidad:</span>
+                <span class="benefit-desc">Se carameliza y dora, ideal para postres y horneados.</span>
+            </li>
+            <li>
+                <span class="check-icon">✓</span>
+                <span class="benefit-title">Sabor Real:</span>
+                <span class="benefit-desc">Igual al azúcar, sin retrogusto metálico.</span>
+            </li>
         </ul>
 
         <table class="price-table">
